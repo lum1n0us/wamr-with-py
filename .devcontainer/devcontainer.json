@@ -1,0 +1,19 @@
+{
+    "name": "rag_trail",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "vscode",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "ms-python.black-formatter",
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install --prefix ~/.local -r .devcontainer/requirements.txt"
+}
