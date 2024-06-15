@@ -1,5 +1,5 @@
 {
-    "name": "rag_trail",
+    "name": "wamr_with_py",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -9,9 +9,9 @@
             "extensions": [
                 "esbenp.prettier-vscode",
                 "ms-python.black-formatter",
-                "ms-python.python",
                 "ms-python.debugpy",
-                "ms-toolsai.jupyter"
+                "ms-python.python",
+                "ms-toolsai.jupyter",
             ]
         }
     },
