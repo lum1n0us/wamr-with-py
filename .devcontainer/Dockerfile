@@ -29,7 +29,7 @@ RUN mkdir wasmer-4.3.0 \
   && tar xf wasmer-linux-amd64.tar.gz -C wasmer-4.3.0 \
   && rm wasmer-linux-amd64.tar.gz
 
-COPY iwasm_binary/d3e89895b/iwasm_interp /opt/wamr/bin/iwasm_interp_d3e89895b
 #
 # Install WAMR
-RUN ln -sf /opt/wamr/bin/iwasm_interp_d3e89895b /usr/local/bin/iwasm
+COPY iwasm_binary/d3e89895b/iwasm_wasi_interp /opt/wamr/bin/iwasm_wasi_interp_d3e89895b
+RUN ln -sf /opt/wamr/bin/iwasm_wasi_interp_d3e89895b /usr/local/bin/iwasm
