@@ -15,5 +15,5 @@
             ]
         }
     },
-    "postCreateCommand": "pip install --prefix ~/.local -r .devcontainer/requirements.txt"
+    "postCreateCommand": "pip install --upgrade pip && pip install --prefix ~/.local -r .devcontainer/requirements.txt"
 }
