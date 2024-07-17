@@ -3,11 +3,12 @@ httpx[cli]
 ipykernel
 jupyter
 mypy
+#nuitka==2.3.11
 numpy==1.26.4
 pandas==2.2.2
 patchelf==0.17.2.1
 ply
-py2wasm==2.6.3
+#py2wasm==2.6.3
 requests==2.31.0
 seaborn==0.13.2
 tqdm
