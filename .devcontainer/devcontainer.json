@@ -19,6 +19,7 @@
     "postCreateCommand": "bash -euvx .devcontainer/finalize.sh",
     "mounts": [
         "source=/home/liam/Workspace/python-as-guest/Nuitka,target=/workspaces/Nuitka,type=bind",
-        "source=/home/liam/Workspace/python-as-guest/py2wasm,target=/workspaces/py2wsm,type=bind"
+        "source=/home/liam/Workspace/python-as-guest/py2wasm,target=/workspaces/py2wasm,type=bind",
+        "source=/home/liam/Workspace/python-as-guest/cpython,target=/workspaces/cpython,type=bind"
     ]
 }
