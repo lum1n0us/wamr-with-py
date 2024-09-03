@@ -18,7 +18,8 @@ ARG WASI_SDK_VER=22
 WORKDIR /opt
 RUN wget -c --progress=dot:giga https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-${WASI_SDK_VER}/wasi-sdk-${WASI_SDK_VER}.0-linux.tar.gz -P /opt \
   && tar xf /opt/wasi-sdk-${WASI_SDK_VER}.0-linux.tar.gz -C /opt \
-  && rm /opt/wasi-sdk-${WASI_SDK_VER}.0-linux.tar.gz
+  && rm /opt/wasi-sdk-${WASI_SDK_VER}.0-linux.tar.gz \
+  && ln -sf /opt/wasi-sdk-${WASI_SDK_VER} /opt/wasi-sdk
 
 #
 # Install wabt
@@ -41,6 +42,14 @@ RUN wget https://github.com/wasmerio/wasmer/releases/download/v4.3.0/wasmer-linu
 RUN mkdir wasmer-4.3.0 \
   && tar xf wasmer-linux-amd64.tar.gz -C wasmer-4.3.0 \
   && rm wasmer-linux-amd64.tar.gz
+
+#
+# Install wasmtime
+WORKDIR /opt
+RUN wget https://github.com/bytecodealliance/wasmtime/releases/download/v24.0.0/wasmtime-v24.0.0-x86_64-linux.tar.xz
+RUN tar xf wasmtime-v24.0.0-x86_64-linux.tar.xz \
+  && rm wasmtime-v24.0.0-x86_64-linux.tar.xz \
+  && ln -sf /opt/wasmtime-v24.0.0-x86_64-linux/wasmtime /usr/local/bin/wasmtime
 
 #
 # Install WAMR stuff
